@@ -14,6 +14,16 @@ let config = {
   connectionLimit: 10,
 };
 
+const db = [{ name: "tiina" }, { name: "jack" }];
+
+app.get("/names", (req, res) => {
+  res.send(db);
+});
+
+app.get("/names", (req, res) => {
+  res.send(db);
+});
+
 var pool = mysql.createPool(config);
 app.get("/", (req, res) => {
   pool.query("SELECT * from location", (error, results) => {
