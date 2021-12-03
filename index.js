@@ -26,7 +26,7 @@ app.get("/names", (req, res) => {
 
 var pool = mysql.createPool(config);
 app.get("/", (req, res) => {
-  pool.query("SELECT * from location", (error, results) => {
+  pool.query("SELECT * from locations", (error, results) => {
     if (error) {
       console.log(error);
     } else {
